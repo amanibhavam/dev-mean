@@ -6,9 +6,9 @@ metadata:
 spec:
   project: mean
   source:
-    repoURL: 'https://github.com/amanibhavam/dev--mean'
+    repoURL: 'https://github.com/amanibhavam/dev-mean'
     path: kuma-global
-    targetRevision: 0.0.1
+    targetRevision: master
   destination:
     name: mean
     namespace: kuma-system
