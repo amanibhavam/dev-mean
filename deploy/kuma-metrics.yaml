@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: mean--kuma-metrics
+  namespace: argocd
+spec:
+  project: mean
+  source:
+    repoURL: 'https://github.com/amanibhavam/dev-mean'
+    path: kuma-metrics
+    targetRevision: master
+  destination:
+    name: mean
+    namespace: kuma-metrics
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=true
